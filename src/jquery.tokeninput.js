@@ -576,7 +576,7 @@
         }
 
         function toggleReadonly(readonly) {
-            if (typeof disable === 'boolean') {
+            if (typeof readonly === 'boolean') {
                 $(input).data("settings").readonly = readonly
             } else {
                 $(input).data("settings").readonly = !$(input).data("settings").readonly;
@@ -587,7 +587,7 @@
             if (selected_token) {
                 deselect_token($(selected_token), POSITION.END);
             }
-            hidden_input.attr('readonly', $(input).data("settings").readonly);
+            hiddenInput.attr('readonly', $(input).data("settings").readonly);
         }
 
         function checkTokenLimit() {
